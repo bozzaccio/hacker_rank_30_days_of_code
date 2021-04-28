@@ -19,14 +19,14 @@ public class Person {
 		if(this.age < 13){
 		    print("You are young.");
 		} else if(this.age >= 13 && this.age < 18){
-		    print("Your are a teenager.");
+		    print("You are a teenager.");
 		} else {
 		    print("You are old.");
 		}
 	}
 
 	public void yearPasses() {
-	 	this.age = this.age + 1;
+  		 this.age = this.age + 1;
 	}
 
     private boolean isAgeNotNegative(int age){
@@ -38,18 +38,3 @@ public class Person {
     }
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int T = sc.nextInt();
-		for (int i = 0; i < T; i++) {
-			int age = sc.nextInt();
-			Person p = new Person(age);
-			p.amIOld();
-			for (int j = 0; j < 3; j++) {
-				p.yearPasses();
-			}
-			p.amIOld();
-			System.out.println();
-        }
-		sc.close();
-    }
-}
