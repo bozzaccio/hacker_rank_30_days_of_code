@@ -9,7 +9,6 @@ public class Solution {
         Scanner scanner = new Scanner(System.in);
         
         int wordCounter = scanner.nextInt();
-        ArrayList words = new ArrayList<String>();
         
         for(int i = 0; i < wordCounter; i++){
             
