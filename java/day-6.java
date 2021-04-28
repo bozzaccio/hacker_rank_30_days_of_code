@@ -11,7 +11,7 @@ public class Solution {
         int wordCounter = scanner.nextInt();
         ArrayList words = new ArrayList<String>();
         
-        for(int i = 0; i<wordCounter; i++){
+        for(int i = 0; i < wordCounter; i++){
             
             String word = scanner.next();
             String result;
