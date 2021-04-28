@@ -16,17 +16,17 @@ public class Person {
     }
 
 	public void amIOld() {
-        if(this.age < 13){
-            print("You are young.");
-        } else if(this.age >= 13 && this.age < 18){
-            print("Your are a teenager.");
-        } else {
-            print("You are old.");
-        }
+		if(this.age < 13){
+		    print("You are young.");
+		} else if(this.age >= 13 && this.age < 18){
+		    print("Your are a teenager.");
+		} else {
+		    print("You are old.");
+		}
 	}
 
 	public void yearPasses() {
-  		 this.age = this.age + 1;
+	 	this.age = this.age + 1;
 	}
 
     private boolean isAgeNotNegative(int age){
