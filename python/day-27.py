@@ -37,3 +37,40 @@ class TestDataExactlyTwoDifferentMinimums(AbstractTest):
     def get_array():
         return[0,0,1]
     
+
+def TestWithEmptyArray():
+    try:
+        seq = TestDataEmptyArray.get_array()
+        result = minimum_index(seq)
+    except ValueError as e:
+        pass
+    else:
+        assert False
+
+
+def TestWithUniqueValues():
+    seq = TestDataUniqueValues.get_array()
+    assert len(seq) >= 2
+
+    assert len(list(set(seq))) == len(seq)
+
+    expected_result = TestDataUniqueValues.get_expected_result()
+    result = minimum_index(seq)
+    assert result == expected_result
+
+
+def TestiWithExactyTwoDifferentMinimums():
+    seq = TestDataExactlyTwoDifferentMinimums.get_array()
+    assert len(seq) >= 2
+    tmp = sorted(seq)
+    assert tmp[0] == tmp[1] and (len(tmp) == 2 or tmp[1] < tmp[2])
+
+    expected_result = TestDataExactlyTwoDifferentMinimums.get_expected_result()
+    result = minimum_index(seq)
+    assert result == expected_result
+
+TestWithEmptyArray()
+TestWithUniqueValues()
+TestiWithExactyTwoDifferentMinimums()
+print("OK")
+
